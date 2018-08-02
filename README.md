@@ -1,24 +1,5 @@
-# README
+# Refactoring de relacionamento
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A Madonna resolveu lançar um album em parceria com a Shakira! E agora?!
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Nosso PO jamais iria esperar que um album pudesse ter mais de um artita. Transforme a relacão 1 para N entre Player e Album em uma relação N para N. Precisamos de testes senão o chato do agilista vai brigar conosco!
