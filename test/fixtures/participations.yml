@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+shakira_fijacion:
+  album: fijacion
+  player: shakira
+
+shakira_fixation:
+  album: fixation
+  player: shakira
