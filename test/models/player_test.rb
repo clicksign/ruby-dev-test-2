@@ -2,7 +2,8 @@ require 'test_helper'
 
 class PlayerTest < ActiveSupport::TestCase
   test "valid player" do
-    player = Player.new(name: 'Madonna')
+    player = Player.new(name: 'Madonna', albums: [albums(:fijacion), albums(:fixation)])
+
     assert player.valid?
   end
 
