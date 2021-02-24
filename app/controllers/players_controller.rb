@@ -15,6 +15,13 @@ class PlayersController < ApplicationController
   # GET /players/new
   def new
     @player = Player.new
+    @player.album.build
+    @player.player_album.build
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @player }
+    end
   end
 
   # GET /players/1/edit

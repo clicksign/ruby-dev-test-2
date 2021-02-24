@@ -15,6 +15,13 @@ class AlbumsController < ApplicationController
   # GET /albums/new
   def new
     @album = Album.new
+    @album.album.build
+    @album.player_album.build
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @album }
+    end
   end
 
   # GET /albums/1/edit
