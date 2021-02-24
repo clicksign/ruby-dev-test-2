@@ -8,8 +8,16 @@
         <li><%= message %></li>
       <% end %>
       </ul>
+
     </div>
   <% end %>
+
+  <%= form.label :"Player Name" %> 
+  <%= form.text_field :name %><br>
+
+  <% f.fields_for :associations do |assoc_form| %>
+  <%= render :partial => 'albums', :locals => {:f => assoc_form} %>       
+  <%= create_association_link, "Create New Player and New Album" %>
 
   <div class="actions">
     <%= form.submit %>
