@@ -11,7 +11,7 @@ Nosso PO jamais iria esperar que um album pudesse ter mais de um artista. Transf
 
 Para implementar o desafio proposto, utilizei 3 migrations, refatorei as models para adaptarem-se as a relação de muitos para muitos, como também criei testes para alguns casos básicos.
 
-1. Primeiramente iniciar a criacao do banco com suas migrações `rails db:create db:migration`
+1. Primeiramente iniciar a criação do banco com suas migrações `rails db:create db:migration`
 
 2. Na sequência rodar os testes `rails test test`
 
