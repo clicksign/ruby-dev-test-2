@@ -1,5 +1,7 @@
 class Album < ApplicationRecord
-  belongs_to :player
+  has_and_belongs_to_many :players
+  accepts_nested_attributes_for :players
 
-  validates_presence_of :name
+  validates :name, presence: true
+  validates :players, presence: true
 end
