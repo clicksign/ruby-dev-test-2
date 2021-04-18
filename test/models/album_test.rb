@@ -13,8 +13,13 @@ class AlbumTest < ActiveSupport::TestCase
   end
 
   test "presence of player" do
-    album = Album.new
-    assert_not album.valid?
-    assert_not_empty album.errors[:player]
+    album = Album.new(name: "The new one")
+
+    ["Shakira", "Madonna"].each |player|
+      album.players.build(name: player)
+    end
+
+    assert album.valid?
+    assert album.players.count == 2
   end
 end

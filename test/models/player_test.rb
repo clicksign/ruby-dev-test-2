@@ -11,4 +11,15 @@ class PlayerTest < ActiveSupport::TestCase
     assert_not player.valid?
     assert_not_empty player.errors[:name]
   end
+
+  test "presence of album" do
+    player = Player.new(name: "Shakira")
+
+    ["Solo", "Feat Madonna"].each do |album|
+      player.albums.build(name: album)
+    end
+
+    assert player.valid?
+    assert player.albums.count == 2
+  end
 end
