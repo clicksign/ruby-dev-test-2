@@ -1,0 +1,2 @@
+class PlayerAlbum < ApplicationRecord
+end
