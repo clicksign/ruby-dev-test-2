@@ -22,4 +22,16 @@ class AlbumTest < ActiveSupport::TestCase
     assert album.valid?
     assert album.players.count == 2
   end
+
+  test "deletes album but not player" do
+    album = Album.new(name: "The new one")
+
+    ["Shakira", "Madonna"].each do |player|
+      album.players.build(name: player)
+    end
+
+    album.save
+    album.destroy
+    assert Player.find_by(name: "Shakira").present? == true
+  end
 end
