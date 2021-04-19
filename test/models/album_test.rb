@@ -15,7 +15,7 @@ class AlbumTest < ActiveSupport::TestCase
   test "presence of player" do
     album = Album.new(name: "The new one")
 
-    ["Shakira", "Madonna"].each |player|
+    ["Shakira", "Madonna"].each do |player|
       album.players.build(name: player)
     end
 
