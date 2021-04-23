@@ -1,4 +1,4 @@
-require 'test_helper'
+require_relative '../test_helper'
 
 class PlayerTest < ActiveSupport::TestCase
   test "valid player" do
@@ -6,9 +6,16 @@ class PlayerTest < ActiveSupport::TestCase
     assert player.valid?
   end
 
+  test "multiple valid albums for player" do
+    player = Player.new(name: 'Player1')
+    ['Album1', 'Album2'].each do |album|
+      player.albums << Album.new(name: album)
+    end
+    assert player.valid?
+  end
+
   test "presence of name" do
     player = Player.new
     assert_not player.valid?
-    assert_not_empty player.errors[:name]
   end
 end
