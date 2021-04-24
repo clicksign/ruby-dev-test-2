@@ -7,7 +7,10 @@ RSpec.describe Player, type: :model do
   end
 
   describe 'validations' do
-    it 'should be invalid create a Player without name' do
+    it { should validate_presence_of(:name) }
+
+    it 'Name cant be blank' do
+      expect{ FactoryBot.create(:player, name: '') }.to raise_error(ActiveRecord::RecordInvalid)
     end
   end
 end
