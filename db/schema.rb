@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_02_203647) do
+ActiveRecord::Schema.define(version: 2021_05_31_151749) do
+
+  create_table "album_members", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "album_id"
+    t.index ["album_id"], name: "index_album_members_on_album_id"
+    t.index ["player_id"], name: "index_album_members_on_player_id"
+  end
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
