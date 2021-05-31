@@ -1,5 +1,6 @@
 class Player < ApplicationRecord
-  has_many :albums
+  has_many :album_members
+  has_many :albums, through: :album_members
 
-  validates_presence_of :name
+  validates :name, presence: true
 end
