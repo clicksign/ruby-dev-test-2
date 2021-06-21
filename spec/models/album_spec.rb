@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Album, :type => :model do
+  describe 'associations' do
+    it "should have many players" do
+      album_assoc = Album.reflect_on_association(:players)
+      expect(album_assoc.macro).to eq(:has_and_belongs_to_many)
+    end
+  end
+
   it "is valid with valid attributes" do
     player = Player.new(name: "Madonna")
     album = Album.new(name: "STARS", players: [player])
