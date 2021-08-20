@@ -12,4 +12,13 @@ RSpec.describe Player, type: :model do
       expect(player.errors[:name]).not_to be_empty
     end
   end
+  context "when in n to n association" do
+    let(:shakira) { Player.create(name: 'Shakira')}
+    let!(:fijaction) { Album.create(name: 'Fijación Oral, Vol. 1', players: [shakira])}
+    let!(:fixation) { Album.create(name: 'Oral Fixation, Vol. 2', players: [shakira])}
+    it "can have multiple albums" do
+      expect(shakira).to be_valid
+      expect(shakira.albums.size).to eq(2)
+    end
+  end
 end
