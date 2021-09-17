@@ -12,9 +12,11 @@ class AlbumTest < ActiveSupport::TestCase
     assert_not_empty album.errors[:name]
   end
 
-  test "presence of player" do
-    album = Album.new
-    assert_not album.valid?
-    assert_not_empty album.errors[:player]
+
+  test "presence of players" do
+    shakira = Player.create(name: 'Shakira')
+    madona = Player.create(name: 'Madona')
+    madona_album = shakira.albums.create(name:' Album Madona', player_id: madona)
+    assert madona_album.valid?
   end
 end
