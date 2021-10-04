@@ -1,5 +1,4 @@
 class Album < ApplicationRecord
-  belongs_to :player
-
+  has_many :account
   validates_presence_of :name
 end
