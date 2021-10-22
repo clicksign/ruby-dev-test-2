@@ -1,0 +1,26 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.7.3
+  NewCops: enable
+  Exclude:
+    - config/**/*
+    - db/**/*
+    - bin/*
+    - spec/*
+    - node_modules/**/*
+    - .simplecov
+Layout/LineLength:
+  Max: 100
+  AutoCorrect: true
+  Exclude:
+    - spec/**/*
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Metrics:
+  Enabled: false
