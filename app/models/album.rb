@@ -1,6 +1,5 @@
 class Album < ApplicationRecord
-  has_many :authorships
-  has_many :players, through: :authorships
+  belongs_to :player
 
   validates_presence_of :name
 end

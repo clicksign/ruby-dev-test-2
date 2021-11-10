@@ -1,6 +1,5 @@
 class Player < ApplicationRecord
-  has_many :authorships
-  has_many :albums, through: :authorships
+  has_many :albums
 
   validates_presence_of :name
 end
