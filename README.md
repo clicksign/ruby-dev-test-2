@@ -95,7 +95,7 @@ end
 
 ## Contemplando um banco em produção já populado
 
-Em um cenário onde nem o PO nem nós desenvoldores conseguimos prever a necessidade de mudança no data model antes de colocar a aplicação em uso, fazer essa adaptação com o banco populado requer um passo extras já que a autoria dos albuns precisa ser persistida no novo arranjo de dados. 
+Em um cenário onde nem o PO nem nós desenvoldores conseguimos prever a necessidade de mudança no data model antes de colocar a aplicação em uso, fazer essa adaptação com o banco populado requer um passo extra já que a autoria dos albuns precisa ser persistida no novo arranjo de dados. 
 
 ```diff
 class CreateAuthorships < ActiveRecord::Migration[5.2]
@@ -112,6 +112,86 @@ class CreateAuthorships < ActiveRecord::Migration[5.2]
 +   end
 
     remove_reference :albums, :player, foreign_key: true
+  end
+end
+```
+
+## Reescrevendo os testes
+
+### Fixtures
+
+`test/fixtures/albums.yml`
+```yml
+fijacion:
+  name: Fijación Oral, Vol. 1
+
+fixation:
+  name: Oral Fixation, Vol. 2
+
+beautiful_liar:
+  name: Beautiful Liar
+```
+
+`test/fixtures/players.yml`
+```yml
+beyonce:
+  name: Beyonce
+
+shakira:
+  name: Shakira
+```
+
+`test/fixtures/authorships.yml`
+```yml
+a:
+  player: :shakira
+  album: :beautiful_liar
+
+b:
+  player: :beyonce
+  album: :beautiful_liar
+```
+
+### Fixtures
+
+`test/models/album_test.rb`
+```ruby
+require 'test_helper'
+
+class AlbumTest < ActiveSupport::TestCase
+  test "valid album" do
+    album = albums(:beautiful_liar)
+    assert album.valid?
+  end
+
+  test "presence of name" do
+    album = Album.new
+    assert_not album.valid?
+    assert_not_empty album.errors[:name]
+  end
+
+  test "presence of players" do
+    album = Album.new
+    assert_not album.valid?
+    assert_not_empty album.errors[:players]
+  end
+end
+```
+
+`test/models/player_test.rb`
+```ruby
+require 'test_helper'
+
+class PlayerTest < ActiveSupport::TestCase
+  test "valid player" do
+    player = Player.new(name: 'Madonna')
+    assert player.valid?
+  end
+
+  test "presence of name" do
+    player = Player.new
+    assert_not player.valid?
+    assert_not_empty player.errors[:name]
   end
 end
 ```
