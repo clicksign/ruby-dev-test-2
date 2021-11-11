@@ -195,3 +195,6 @@ class PlayerTest < ActiveSupport::TestCase
   end
 end
 ```
+
+## E é isso!
+> Estou muito grato ao time pela oportunidade de mostrar parte do meu trabalho e espero poder somar a Clicksign em breve!
