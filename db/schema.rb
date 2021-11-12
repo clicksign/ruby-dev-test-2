@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2018_08_02_203647) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "albums", force: :cascade do |t|
     t.string "name"
-    t.integer "player_id"
+    t.bigint "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["player_id"], name: "index_albums_on_player_id"
@@ -26,4 +29,5 @@ ActiveRecord::Schema.define(version: 2018_08_02_203647) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "albums", "players"
 end
