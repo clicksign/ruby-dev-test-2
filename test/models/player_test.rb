@@ -3,7 +3,7 @@ require 'test_helper'
 class PlayerTest < ActiveSupport::TestCase
   
   def setup
-    @player = Player.new(name: 'Madonna')
+    @player = Player.new(name: players(:eminem))
   end
 
   context 'associations' do
@@ -31,5 +31,5 @@ class PlayerTest < ActiveSupport::TestCase
     assert_not @player.save, "Saved the player without a name"
   end
 
-
+  
 end

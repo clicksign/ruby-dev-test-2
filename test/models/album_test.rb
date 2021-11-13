@@ -3,11 +3,10 @@ require 'test_helper'
 class AlbumTest < ActiveSupport::TestCase
  
   def setup
-    @album = Album.new(name: 'Peligro', player: players(:shakira))
+    @album = Album.new(name: albums(:in_da_club))
   end
 
   context 'associations' do
-    #should belong_to(:player).class_name('Player')
     should have_many(:players).through(:album_players)
   end
 
@@ -32,10 +31,4 @@ class AlbumTest < ActiveSupport::TestCase
     assert_not @album.save, "Saved the album without a name"
   end
 
-
-  test "presence of player" do
-    @album.player = nil 
-    assert_not @album.valid?
-    assert_not_empty @album.errors[:player]
-  end
 end
