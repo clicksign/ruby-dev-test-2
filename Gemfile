@@ -51,6 +51,9 @@ group :development do
 end
 
 group :test do
+  
+  gem 'shoulda', '~> 4.0'
+    
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'

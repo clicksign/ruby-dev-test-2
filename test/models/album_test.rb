@@ -6,6 +6,10 @@ class AlbumTest < ActiveSupport::TestCase
     @album = Album.new(name: 'Peligro', player: players(:shakira))
   end
 
+  context 'associations' do
+    should belong_to(:player).class_name('Player')
+  end
+
   test "valid album" do
     assert @album.valid?
   end

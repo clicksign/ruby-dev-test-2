@@ -6,6 +6,9 @@ class PlayerTest < ActiveSupport::TestCase
     @player = Player.new(name: 'Madonna')
   end
 
+  context 'associations' do
+    should have_many(:albums).class_name('Album')
+  end
 
   test "valid player" do
     assert @player.valid?
