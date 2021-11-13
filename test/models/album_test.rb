@@ -7,7 +7,8 @@ class AlbumTest < ActiveSupport::TestCase
   end
 
   context 'associations' do
-    should belong_to(:player).class_name('Player')
+    #should belong_to(:player).class_name('Player')
+    should have_many(:players).through(:album_players)
   end
 
   test "valid album" do

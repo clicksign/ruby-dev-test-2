@@ -7,7 +7,7 @@ class PlayerTest < ActiveSupport::TestCase
   end
 
   context 'associations' do
-    should have_many(:albums).class_name('Album')
+    should have_many(:albums).through(:album_players)
   end
 
   test "valid player" do
