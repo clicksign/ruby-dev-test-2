@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,28 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_211_129_211_415) do
-  create_table 'album_players', force: :cascade do |t|
-    t.integer 'album_id'
-    t.integer 'player_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['album_id'], name: 'index_album_players_on_album_id'
-    t.index ['player_id'], name: 'index_album_players_on_player_id'
+ActiveRecord::Schema.define(version: 2021_11_29_211415) do
+
+  create_table "album_players", force: :cascade do |t|
+    t.integer "album_id"
+    t.integer "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["album_id"], name: "index_album_players_on_album_id"
+    t.index ["player_id"], name: "index_album_players_on_player_id"
   end
 
-  create_table 'albums', force: :cascade do |t|
-    t.string 'name'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "albums", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'players', force: :cascade do |t|
-    t.string 'name'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_foreign_key 'album_players', 'albums'
-  add_foreign_key 'album_players', 'players'
+  add_foreign_key "album_players", "albums"
+  add_foreign_key "album_players", "players"
 end
