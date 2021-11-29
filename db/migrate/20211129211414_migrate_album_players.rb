@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MigrateAlbumPlayers < ActiveRecord::Migration[5.2]
   def self.up
     Album.transaction do

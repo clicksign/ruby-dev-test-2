@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateAlbumPlayers < ActiveRecord::Migration[5.2]
   def change
     create_table :album_players do |t|
