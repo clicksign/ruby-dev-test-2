@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :album_player do
-    it { should belong_to(:album) }
-    it { should belong_to(:player) }
+    album { build(:album) }
+    player { build(:player) }
   end
 end
