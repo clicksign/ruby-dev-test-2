@@ -79,6 +79,14 @@ RSpec.configure do |config|
   #
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
+
+  Shoulda::Matchers.configure do |match|
+    match.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end
+  end
+
   config.infer_spec_type_from_file_location!
 
   # Filter lines from Rails gems in backtraces.
