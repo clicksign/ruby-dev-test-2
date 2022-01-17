@@ -1,11 +1,20 @@
 fijacion:
   name: Fijación Oral, Vol. 1
-  player: shakira
+  players: 
+    - shakira
 
 fixation:
   name: Oral Fixation, Vol. 2
-  player: shakira
+  players: 
+    - shakira
 
 fixation:
   name: She Wolf
-  player: shakira
+  players: 
+    - shakira
+
+dimension:
+  name: Dimension
+  players: 
+    - shakira
+    - beyonce
