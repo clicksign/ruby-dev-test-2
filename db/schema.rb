@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_22_181720) do
+ActiveRecord::Schema.define(version: 2022_03_22_221515) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
@@ -27,8 +27,6 @@ ActiveRecord::Schema.define(version: 2022_03_22_181720) do
   create_table "players_albums", force: :cascade do |t|
     t.integer "player_id"
     t.integer "album_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["album_id"], name: "index_players_albums_on_album_id"
     t.index ["player_id"], name: "index_players_albums_on_player_id"
   end
