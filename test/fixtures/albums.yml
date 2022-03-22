@@ -1,11 +1,17 @@
 fijacion:
   name: Fijación Oral, Vol. 1
-  player: shakira
+  players: shakira
 
 fixation:
   name: Oral Fixation, Vol. 2
-  player: shakira
+  players: shakira
 
 fixation:
   name: She Wolf
-  player: shakira
+  players: shakira
+
+the_best_songs:
+  name: Madonna && Shakira - The best songs
+
+the_love_songs:
+  name: The Love Songs
