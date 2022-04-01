@@ -1,5 +1,6 @@
 class Album < ApplicationRecord
-  belongs_to :player
+  has_one :player
+  has_and_belongs_to_many :players, join_table: "albums_players"
 
-  validates_presence_of :name
+  validates :name, :players, presence: true
 end
