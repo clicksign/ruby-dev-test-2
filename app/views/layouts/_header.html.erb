@@ -1,0 +1,29 @@
+
+    <nav class="navbar navbar-expand-lg navbar-color bg-success">
+      <div class="container">
+        <%= link_to "Players Album", root_path, class:"navbar-brand text-white" %> 
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          
+          <span class=" d-block navbar-toggler-icon"></span>
+          <span class=" d-block navbar-toggler-icon"></span>
+          <span class=" d-block navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <%= link_to "Players", players_path, class: "nav-link text-white" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Albums", albums_path, class: "nav-link text-white" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "New album", new_album_path, class: "nav-link text-white" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "New alayer", new_player_path, class: "nav-link text-white" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+</nav>
