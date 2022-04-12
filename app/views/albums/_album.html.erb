@@ -4,7 +4,7 @@
       <h6 class="card-subtitle mb-2 text-muted">Players</h6>
       
        
-      <%= render album.players%> 
+      <%= render "players/name", alb: album%> 
         <br>
         <%= link_to "Show this album", album, class:"btn btn-info" %>
         <%= link_to "Edit this album", edit_album_path(album), class:"btn btn-success" %> 

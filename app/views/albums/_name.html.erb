@@ -1,0 +1,9 @@
+<div id="player">
+<% if play.albums.any? %>
+    <%  play.albums.each do |album|  %>
+        <%= album.name %>
+        <br>
+    <% end %>
+<% end %>
+
+</div>

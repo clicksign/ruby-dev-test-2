@@ -1,13 +1,15 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: %i[ show edit update destroy ]
-
+  
   # GET /players or /players.json
   def index
     @players = Player.all
+    @page_name = "index"
   end
 
   # GET /players/1 or /players/1.json
   def show
+    @page_name = "show"
   end
 
   # GET /players/new
