@@ -1,5 +1,18 @@
-<div id="<%= dom_id player %>">
 
-    <%= player.name %> <br>
+  <div class="card text-center" id="<%= dom_id player %>">
+    <div class="card-body bg-light">
+      <h5 class="card-title"><%= player.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Players</h6>
+   
+       <%= render player.albums%> 
+        <br>
+        <%= link_to "Show this player", player, class:"btn btn-info" %>
+        <%= link_to "Edit this player", edit_player_path(player), class:"btn btn-success" %> 
+        <%= button_to "Destroy this player", player, method: :delete, class:"btn btn-link" %>
+      
 
-</div>
+    </div>
+  </div>
+  
+
+ <br>
