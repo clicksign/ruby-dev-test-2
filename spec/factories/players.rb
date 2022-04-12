@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :player do
-    name {"Vicente"}
+    name {"Os Lambas"}
   end
 end
