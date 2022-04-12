@@ -1,0 +1,2 @@
+class PlayersAlbumsController < ApplicationController
+end
