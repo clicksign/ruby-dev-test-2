@@ -1,7 +1,19 @@
-<div id="<%= dom_id album %>">
-  <p>
-    <strong>Name:</strong>
-    <%= album.name %>
-  </p>
+  <div class="card text-center" id="<%= dom_id album %>">
+    <div class="card-body bg-light">
+      <h5 class="card-title"><%= album.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">Players</h6>
+      
+       
+      <%= render album.players%> 
+  
+      <%= link_to "Show this album", album, class:"btn btn-info" %>
+  
+      <%= button_to "Destroy this album", album, method: :delete, class:"btn btn-link" %>
+    
 
-</div>
+    </div>
+  </div>
+  
+  
+
+ <br>
