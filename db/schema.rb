@@ -10,17 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2018_08_02_203647) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_12_154652) do
   create_table "albums", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "players", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
+  create_table "players_albums", force: :cascade do |t|
+    t.integer "player_id", null: false
+    t.integer "album_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["album_id"], name: "index_players_albums_on_album_id"
+    t.index ["player_id"], name: "index_players_albums_on_player_id"
+  end
+
+  add_foreign_key "players_albums", "albums"
+  add_foreign_key "players_albums", "players"
 end
