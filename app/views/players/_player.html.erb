@@ -4,13 +4,15 @@
       <h5 class="card-title">Players</h5>
       <h6 class="card-subtitle mb-2 text-muted"><%= player.name %></h6>
        
-       <%= render "albums/name", play: player if show_page(@page_name)%> 
+        <% if show_page(@page_name) %>
+         <strong>Albums</strong>
+         <%= render "albums/name", play: player %> 
+        <% end %>
         <br>
         <%= link_to "Show this player", player, class:"btn btn-info" %>
         <%= link_to "Edit this player", edit_player_path(player), class:"btn btn-success" %> 
         <%= button_to "Destroy this player", player, method: :delete, class:"btn btn-link" %>
       
-
     </div>
   </div>
   

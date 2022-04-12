@@ -1,8 +1,7 @@
 <div id="player">
 <% if play.albums.any? %>
     <%  play.albums.each do |album|  %>
-        <%= album.name %>
-        <br>
+    <span class="badge bg-secondary"><%= album.name %></span>
     <% end %>
 <% end %>
 

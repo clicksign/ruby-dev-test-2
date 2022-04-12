@@ -25,15 +25,21 @@ class PlayersController < ApplicationController
   def create
     @player = Player.new(player_params)
 
-    respond_to do |format|
-      if @player.save
-        format.html { redirect_to player_url(@player), notice: "Player was successfully created." }
-        format.json { render :show, status: :created, location: @player }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @player.errors, status: :unprocessable_entity }
+    if @player.albums.any?
+      respond_to do |format|
+        if @player.save
+          format.html { redirect_to player_url(@player), notice: "Player was successfully created." }
+          format.json { render :show, status: :created, location: @player }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @player.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      flash[:alert] = "Impossible to save. Album must exist."
+      render new_player_path(@player)
     end
+
   end
 
   # PATCH/PUT /players/1 or /players/1.json
@@ -67,6 +73,6 @@ class PlayersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def player_params
-      params.require(:player).permit(:name)
+      params.require(:player).permit(:name, album_ids: [])
     end
 end
