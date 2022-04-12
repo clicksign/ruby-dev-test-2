@@ -1,22 +1,21 @@
-<%= bootstrap_form_for(player) do |form| %>
-  <% if player.errors.any? %>
-    
-    <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-     <i class="bi-exclamation-square-fill" ></i>
-      <h3><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h3>
+<main class="container col-lg-6 my-4">
+  <%= bootstrap_form_for(player) do |form| %>
+    <% if player.errors.any? %>
+      
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      
+        <Strong><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</Strong>
 
-      <ul>
-        <% player.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-  <% end %>
+        <ul>
+          <% player.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% end %>
 
-
-
-  <main class="container col-lg-6 my-4">
+  
     <div class="card">
       <div class="card-body">
         <div class="card-title">

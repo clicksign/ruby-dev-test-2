@@ -1,16 +1,22 @@
-<%= bootstrap_form_for(album) do |form| %>
-  <% if album.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
 
-      <ul>
-        <% album.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
 <main class="container col-lg-6 my-4">
+  <%= bootstrap_form_for(album) do |form| %>
+    <% if album.errors.any? %>
+      <div class="row d-flex justify-content-center">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</strong>
+
+          <ul>
+            <% album.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    <% end %>
+
+
   <div class="card">
     <div class="card-body">
       <div class="card-title">
