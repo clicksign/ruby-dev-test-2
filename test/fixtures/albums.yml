@@ -1,11 +1,7 @@
-fijacion:
-  name: Fijación Oral, Vol. 1
-  player: shakira
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-fixation:
-  name: Oral Fixation, Vol. 2
-  player: shakira
+one:
+  name: MyString
 
-fixation:
-  name: She Wolf
-  player: shakira
+two:
+  name: MyString
