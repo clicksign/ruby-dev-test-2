@@ -6,8 +6,7 @@ ruby '3.0.0'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.0.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
@@ -45,6 +44,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
+  gem "factory_bot_rails"
+  gem "database_cleaner-active_record"
+  gem 'rails-controller-testing'
+  gem 'sqlite3'
 end
 
 group :development do
