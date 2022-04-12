@@ -22,15 +22,19 @@ class AlbumsController < ApplicationController
   # POST /albums or /albums.json
   def create
     @album = Album.new(album_params)
-
-    respond_to do |format|
-      if @album.save
-        format.html { redirect_to album_url(@album), notice: "Album was successfully created." }
-        format.json { render :show, status: :created, location: @album }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @album.errors, status: :unprocessable_entity }
+    if @album.players.any?
+      respond_to do |format|
+        if @album.save
+          format.html { redirect_to album_url(@album), notice: "Album was successfully created." }
+          format.json { render :show, status: :created, location: @album }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @album.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      flash[:alert] = "Impossible to save. Player must exist."
+      render new_album_path(@album)
     end
   end
 
@@ -65,6 +69,6 @@ class AlbumsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def album_params
-      params.require(:album).permit(:name)
+      params.require(:album).permit(:name, player_ids: [])
     end
 end

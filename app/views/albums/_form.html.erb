@@ -10,8 +10,22 @@
       </ul>
     </div>
   <% end %>
-
-    <%= form.text_field :name %>
-    <%= form.submit %>
+<main class="container col-lg-6 my-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title">
+      	<h4 class="text-center">Album</h4>
+      </div>
+      <div class="row my-2">
     
+    <%= form.text_field :name %>
+    <%= form.collection_check_boxes :player_ids, Player.order(:name), :id, :name %>
+    <div class="mb-3 d-grid gap-2">
+      <%= form.submit class:"btn btn-success" %>
+		</div>
+
+   </div>
+  </div>
+</main>
+
 <% end %>

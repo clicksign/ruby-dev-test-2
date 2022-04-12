@@ -18,6 +18,7 @@
     <%= render 'layouts/header'%>
     <%= render 'layouts/search'%>
     <%= render 'layouts/message' if notice %>
+    <%= render 'layouts/alert' if alert %>
     <%= yield %>
   </body>
 </html>
