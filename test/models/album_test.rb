@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
@@ -8,23 +10,23 @@ class AlbumTest < ActiveSupport::TestCase
     @anthony = players(:anthony)
   end
 
-  test "valid album" do
+  test 'valid album' do
     album = Album.new(name: 'Peligro')
     assert album.valid?
   end
 
-  test "presence of name" do
+  test 'presence of name' do
     album = Album.new
     assert_not album.valid?
     assert_not_empty album.errors[:name]
   end
 
-  test "associations" do
+  test 'associations' do
     @album.players << @anthony
     @album.players << @flea
-    @by_the_way_album.players.create(name: "Shakira")
+    @by_the_way_album.players.create(name: 'Shakira')
 
     assert_equal 2, @album.players.size
-    assert_equal "Shakira", @by_the_way_album.players.first.name
+    assert_equal 'Shakira', @by_the_way_album.players.first.name
   end
 end
