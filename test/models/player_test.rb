@@ -11,4 +11,10 @@ class PlayerTest < ActiveSupport::TestCase
     assert_not player.valid?
     assert_not_empty player.errors[:name]
   end
+
+  test "has many albums" do
+    player = players(:shakira)
+    player.albums << albums(:help)
+    assert player.albums.count == 2
+  end
 end
