@@ -1,20 +1,17 @@
 require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
+  def setup
+    @album = albums(:the_best)
+  end
+
   test "valid album" do
-    album = Album.new(name: 'Peligro', player: players(:shakira))
-    assert album.valid?
+    assert @album.valid?
+    assert_not_empty @album.players
   end
 
-  test "presence of name" do
-    album = Album.new
-    assert_not album.valid?
-    assert_not_empty album.errors[:name]
-  end
-
-  test "presence of player" do
-    album = Album.new
-    assert_not album.valid?
-    assert_not_empty album.errors[:player]
+  test "associations" do
+    assert_equal 2, @album.players.count
+    assert_equal "Madonna", @album.players.order(name: :asc).first.name
   end
 end
