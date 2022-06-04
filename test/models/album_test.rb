@@ -5,6 +5,7 @@ class AlbumTest < ActiveSupport::TestCase
     album = Album.new(name: 'Peligro', player: players(:shakira))
     assert album.valid?
   end
+ 
 
   test "presence of name" do
     album = Album.new
