@@ -1,11 +1,9 @@
-# fijacion:
-#   name: Fijación Oral, Vol. 1
-#   player: shakira
+fijacion:
+  name: Fijación Oral, Vol. 1
 
-# fixation:
-#   name: Oral Fixation, Vol. 2
-#   player: shakira
+fixation:
+  name: Oral Fixation, Vol. 2
+  
+fixation:
+  name: She Wolf
 
-# fixation:
-#   name: She Wolf
-#   player: shakira
