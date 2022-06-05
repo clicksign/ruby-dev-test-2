@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
   test "valid album" do
-    album = albums(:fixations)
+    album = albums(:she_wolf)
     assert album.valid?
   end
 
