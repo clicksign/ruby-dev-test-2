@@ -1,0 +1,22 @@
+<h1>Albums</h1>
+
+<table>
+  <thead>
+     <tr>
+      <th>Abum</th>
+      <th>Player</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @albums.each do |album| %>
+      <tr>
+        <td><%= album.name %></td>
+        <td><%= album.player.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
