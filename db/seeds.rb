@@ -1,4 +1,11 @@
-madonna = Player.create(name: "Madonna")
-shakira = Player.create(name: "Shakira")
+15.times do |i|
+  Album.create(
+    name: Faker::Music.album
+  )
+end
 
-Album.create(name: "Like a Virgin", player: madonna )
+Album.all.each do |album|
+  rand(1..5).times do |i|
+    album.players.create(name: Faker::Music.band)
+  end
+end

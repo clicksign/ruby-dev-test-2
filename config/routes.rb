@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :albums
+  resources :albums, only: %i[index]
 end
