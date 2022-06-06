@@ -1,0 +1,5 @@
+<%=  form_with(model: @player, local: true) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
