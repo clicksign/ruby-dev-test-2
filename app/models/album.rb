@@ -1,5 +1,6 @@
 class Album < ApplicationRecord
-  belongs_to :player
+  has_many :player_albums, dependent: :destroy
+  has_many :players, through: :player_albums
 
-  validates_presence_of :name
+  validates :name, presence: true, length: { maximum: 255 }
 end
