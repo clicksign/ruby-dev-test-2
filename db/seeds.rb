@@ -1,4 +1,4 @@
-15.times do |i|
+3.times do |i|
   Album.create(
     name: Faker::Music.album
   )
