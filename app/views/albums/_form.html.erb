@@ -1,0 +1,9 @@
+<%=  form_with(model: @album, local: true) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+    <%= f.collection_select(:player_ids, Player.all, :id, :name,
+                          { prompt: "Choose a player or many players in the list of players",
+                            include_hidden: false },
+                          { multiple: true }) %>
+  <%= f.submit %>
+<% end %>
