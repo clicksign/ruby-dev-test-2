@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 2022_06_19_122634) do
   end
 
   create_table "albums_players", id: false, force: :cascade do |t|
-    t.integer "album_id_id"
-    t.integer "player_id_id"
-    t.index ["album_id_id"], name: "index_albums_players_on_album_id_id"
-    t.index ["player_id_id"], name: "index_albums_players_on_player_id_id"
-    t.index [nil, nil], name: "index_albums_players_on_album_id_and_player_id", unique: true
+    t.integer "album_id"
+    t.integer "player_id"
+    t.index ["album_id", "player_id"], name: "index_albums_players_on_album_id_and_player_id", unique: true
+    t.index ["album_id"], name: "index_albums_players_on_album_id"
+    t.index ["player_id"], name: "index_albums_players_on_player_id"
   end
 
   create_table "players", force: :cascade do |t|
