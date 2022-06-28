@@ -2,7 +2,11 @@ require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
   test "valid album" do
-    album = Album.new(name: 'Peligro', player: players(:shakira))
+    album = Album.new(name: 'Peligro')
+    player = players(:shakira)
+
+    album.players << player
+    
     assert album.valid?
   end
 
@@ -15,6 +19,18 @@ class AlbumTest < ActiveSupport::TestCase
   test "presence of player" do
     album = Album.new
     assert_not album.valid?
-    assert_not_empty album.errors[:player]
+    assert_not_empty album.errors[:players]
+  end
+
+  test 'album with many players' do 
+    album = Album.new(name: 'Peligro')
+    shakira = players(:shakira)
+    beyonce = players(:beyonce)
+
+    album.players << shakira
+    album.players << beyonce
+    album.save
+
+    assert_equal 2, album.players.count
   end
 end

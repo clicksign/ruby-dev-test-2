@@ -11,4 +11,16 @@ class PlayerTest < ActiveSupport::TestCase
     assert_not player.valid?
     assert_not_empty player.errors[:name]
   end
+
+  test 'player with many albums' do 
+    player = Player.new(name: 'Madonna')    
+    fijacion = albums(:fijacion)
+    fixation = albums(:fixation)
+
+    fijacion.players << player
+    fixation.players << player
+    player.save
+
+    assert_equal 2, player.albums.count
+  end
 end
