@@ -35,13 +35,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
 # Use Faker to data fake
 gem 'faker', '~> 2.12'
-
 # Use FactoryBot to create factories
 gem 'factory_bot'
-
 gem 'minitest'
 
 group :development, :test do
