@@ -37,8 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Use Faker to data fake
 gem 'faker', '~> 2.12'
-# Use FactoryBot to create factories
-gem 'factory_bot'
+
 gem 'minitest'
 
 group :development, :test do
@@ -46,6 +45,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use Rspec to tests
   gem 'rspec-rails'
+  # Use FactoryBot to create factories
+  gem 'factory_bot_rails' # Generate factories
 end
 
 group :development do
