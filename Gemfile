@@ -42,10 +42,12 @@ gem 'faker', '~> 2.12'
 # Use FactoryBot to create factories
 gem 'factory_bot'
 
+gem 'minitest'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-    # Use Rspec to tests
+  # Use Rspec to tests
   gem 'rspec-rails'
 end
 

@@ -222,6 +222,7 @@ DEPENDENCIES
   faker (~> 2.12)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  minitest
   puma (~> 3.12)
   rails (~> 5.2.0)
   rspec-rails
