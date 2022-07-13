@@ -18,13 +18,13 @@ ActiveRecord::Schema.define(version: 2022_07_13_132844) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "player_albums", force: :cascade do |t|
-    t.integer "player_id", null: false
+  create_table "albums_players", force: :cascade do |t|
     t.integer "album_id", null: false
+    t.integer "player_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["album_id"], name: "index_player_albums_on_album_id"
-    t.index ["player_id"], name: "index_player_albums_on_player_id"
+    t.index ["album_id"], name: "index_albums_players_on_album_id"
+    t.index ["player_id"], name: "index_albums_players_on_player_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -33,6 +33,6 @@ ActiveRecord::Schema.define(version: 2022_07_13_132844) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "player_albums", "albums"
-  add_foreign_key "player_albums", "players"
+  add_foreign_key "albums_players", "albums"
+  add_foreign_key "albums_players", "players"
 end
