@@ -12,6 +12,15 @@ class PlayerTest < ActiveSupport::TestCase
     assert_not_empty player.errors[:name]
   end
 
+  test "presence of repeated albums" do
+    player = create(:valid_player)
+    album = create(:valid_album, players: [player])
+
+    assert_raises ActiveRecord::RecordInvalid do
+      player.albums << (album)
+    end
+  end
+
   test "recover correct albums" do
     player1 = create(:valid_player)
     player2 = create(:valid_player)
