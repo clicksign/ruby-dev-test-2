@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2022_07_13_132844) do
     t.integer "player_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["album_id", "player_id"], name: "index_albums_players_on_album_id_and_player_id", unique: true
     t.index ["album_id"], name: "index_albums_players_on_album_id"
     t.index ["player_id"], name: "index_albums_players_on_player_id"
   end
