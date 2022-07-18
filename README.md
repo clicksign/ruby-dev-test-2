@@ -1,5 +1,7 @@
 # run tests
 ``` bundle install ```
+
+
 ``` rails test ```
 
 # Refactoring de relacionamento
