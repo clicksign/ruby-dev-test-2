@@ -1,3 +1,7 @@
+# run tests
+``` bundle install ```
+``` rails test ```
+
 # Refactoring de relacionamento
 
 > A Madonna resolveu lançar um album em parceria com a Shakira! E agora?!
