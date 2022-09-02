@@ -1,5 +1,6 @@
 class Player < ApplicationRecord
-  has_many :albums
+  has_many :albums_players, dependent: :destroy
+  has_many :albums, through: :albums_players  
 
-  validates_presence_of :name
+  validates :name, presence: true
 end
