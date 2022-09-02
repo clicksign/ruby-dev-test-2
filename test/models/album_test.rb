@@ -12,7 +12,7 @@ class AlbumTest < ActiveSupport::TestCase
     assert_not_empty album.errors[:name]
   end
 
-  test "presence of player" do
+  test "presence of players" do
     album = Album.new
     assert_not album.valid?
     assert_not_empty album.errors[:players]
