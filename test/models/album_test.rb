@@ -8,13 +8,6 @@ class AlbumTest < ActiveSupport::TestCase
     assert album.valid?
   end
 
-  test "not valid album" do
-    album = Album.new(name: 'Peligro')
-    album.save
-    album.players << players(:shakira)
-    assert album.valid?
-  end
-
   test "presence of name" do
     album = Album.new
     assert_not album.valid?
