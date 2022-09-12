@@ -11,4 +11,13 @@ class PlayerTest < ActiveSupport::TestCase
     assert_not player.valid?
     assert_not_empty player.errors[:name]
   end
+
+  test "has many albums" do
+    player = Player.new(name: 'João Gordo')
+    player.save!
+    player.albums.create(name: 'Crucificados Pelo Sistema')
+    player.albums.create(name: 'Anarcofobia')
+
+    assert_equal 2, player.albums.count
+  end
 end
