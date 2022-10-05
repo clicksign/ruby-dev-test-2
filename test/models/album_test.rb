@@ -4,7 +4,8 @@ class AlbumTest < ActiveSupport::TestCase
   test "valid album" do
     players = [players(:shakira), players(:beyonce)]
     album = Album.new(name: 'Peligro', players: players)
-    assert album.players.map(&:name).contains(['Shakira', 'Beyonce'])
+    assert album.players[0].name == 'Shakira'
+    assert album.players[1].name == 'Beyonce'
     assert album.valid?
   end
 
