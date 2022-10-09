@@ -1,0 +1,42 @@
+version: '3.9'
+
+networks:
+  internal:
+    driver: bridge
+    name: internal
+
+volumes:
+  gems-data:
+
+services:
+  app: &app
+    container_name: app
+    hostname: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    volumes:
+      - .:/home/app/web
+      - gems-data:/usr/local/bundle
+    stdin_open: true
+    tty: true
+    command: bundle exec rails server -p 3005 -b 0.0.0.0
+    ports:
+      - 3005:3005
+    networks:
+      - internal
+    environment: &env
+      RACK_ENV: development
+      RAILS_ENV: development
+      PORT: 3005
+      RAILS_SERVE_STATIC_FILES: null
+      RAILS_LOG_TO_STDOUT: 'true'
+
+  specs:
+    <<: *app
+    command: /bin/ash -c "bundle exec rails db:test:prepare && bundle exec rspec spec"
+    environment:
+      <<: *env
+      RACK_ENV: test
+      RAILS_ENV: test
