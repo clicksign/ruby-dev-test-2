@@ -1,6 +1,5 @@
 class Album < ApplicationRecord
-  has_many :album_players
-  has_many :players, through: :album_players, source: :player
+  has_and_belongs_to_many :players
 
   validates_presence_of :name
   validates :players, presence: true, length: { minimum: 1 }
