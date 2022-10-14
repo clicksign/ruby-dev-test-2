@@ -11,4 +11,12 @@ class PlayerTest < ActiveSupport::TestCase
     assert_not player.valid?
     assert_not_empty player.errors[:name]
   end
+
+  test "player has albums" do
+    player = Player.create(name: 'Madonna')
+    album = Album.create(name: 'Peligro', players: [ player ])
+    assert player.valid?
+    assert player.albums.size == 1
+    assert player.albums.first == album
+  end
 end
