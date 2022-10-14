@@ -12,19 +12,17 @@
 
 ActiveRecord::Schema.define(version: 2022_10_14_203315) do
 
-  create_table "album_players", force: :cascade do |t|
-    t.integer "album_id"
-    t.integer "player_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["album_id"], name: "index_album_players_on_album_id"
-    t.index ["player_id"], name: "index_album_players_on_player_id"
-  end
-
   create_table "albums", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "albums_players", id: false, force: :cascade do |t|
+    t.integer "album_id"
+    t.integer "player_id"
+    t.index ["album_id"], name: "index_albums_players_on_album_id"
+    t.index ["player_id"], name: "index_albums_players_on_player_id"
   end
 
   create_table "players", force: :cascade do |t|
