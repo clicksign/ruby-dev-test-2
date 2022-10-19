@@ -6,9 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
-1000.times.do 
-  artist = Artist.create! name: Faker::Artist.name
-  10.times do
-    Album.create! artist: artist, name: Faker::Music.album
+ActiveRecord::Base.transaction do
+  1000.times do 
+    player = Player.create! name: Faker::Artist.name
+    10.times do
+      Album.create! player: player, name: Faker::Music.album
+    end
   end
 end
