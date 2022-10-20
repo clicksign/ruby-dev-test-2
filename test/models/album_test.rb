@@ -2,19 +2,16 @@ require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
   test "valid album" do
-    album = Album.new(name: 'Peligro', player: players(:shakira))
+    album = Album.new(name: 'Peligro')
+
     assert album.valid?
   end
 
-  test "presence of name" do
-    album = Album.new
-    assert_not album.valid?
-    assert_not_empty album.errors[:name]
+  context 'associations' do
+    should have_and_belong_to_many(:players)
   end
 
-  test "presence of player" do
-    album = Album.new
-    assert_not album.valid?
-    assert_not_empty album.errors[:player]
+  context 'validations' do
+    should validate_presence_of(:name)
   end
 end
