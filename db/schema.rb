@@ -25,10 +25,6 @@ ActiveRecord::Schema.define(version: 2022_10_20_214102) do
     t.index ["player_id"], name: "index_albums_players_on_player_id"
   end
 
-  create_table "data_migrations", primary_key: "version", id: :string, force: :cascade do |t|
-    t.index ["version"], name: "sqlite_autoindex_data_migrations_1", unique: true
-  end
-
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
