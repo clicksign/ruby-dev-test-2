@@ -1,0 +1,23 @@
+fijacion_shakira:
+  album_id: 1
+  player_id: 2
+
+fixation_shakira:
+  album_id: 2
+  player_id: 2
+
+virgen_madona:
+  album_id: 3
+  player_id: 3
+
+lemonade_beyonce:
+  album_id: 4
+  player_id: 1
+
+shared_madona:
+  album_id: 5
+  player_id: 3
+
+shared_shakira:
+  album_id: 5
+  player_id: 2

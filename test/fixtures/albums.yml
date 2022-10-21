@@ -1,11 +1,19 @@
 fijacion:
+  id: 1
   name: Fijación Oral, Vol. 1
-  player: shakira
 
 fixation:
+  id: 2
   name: Oral Fixation, Vol. 2
-  player: shakira
 
-fixation:
-  name: She Wolf
-  player: shakira
+virgen:
+  id: 3
+  name: Like a virgen
+
+lemonade:
+  id: 4
+  name: Lemonade
+
+shared:
+  id: 5
+  name: Shared
