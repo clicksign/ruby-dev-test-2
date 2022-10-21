@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2022_10_20_214102) do
   create_table "albums_players", force: :cascade do |t|
     t.integer "album_id", null: false
     t.integer "player_id", null: false
+    t.index ["album_id", "player_id"], name: "index_albums_players_on_album_id_and_player_id", unique: true
     t.index ["album_id"], name: "index_albums_players_on_album_id"
     t.index ["player_id"], name: "index_albums_players_on_player_id"
   end
