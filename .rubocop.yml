@@ -1,0 +1,17 @@
+AllCops:
+  Exclude:
+    - 'lib/**/*'
+    - 'vendor/**/*'
+    - 'app/views/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/*'
+    - 'config.ru'
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'Capfile'
+
+  NewCops: enable
+
+Style/Documentation:
+  Enabled: false
