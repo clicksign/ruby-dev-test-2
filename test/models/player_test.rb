@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class PlayerTest < ActiveSupport::TestCase
-  test "valid player" do
+  test 'valid player' do
     player = Player.new(name: 'Madonna')
 
     assert player.valid?

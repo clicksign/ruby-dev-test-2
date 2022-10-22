@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
-  test "valid album" do
+  test 'valid album' do
     album = Album.new(name: 'Peligro')
 
     assert album.valid?
