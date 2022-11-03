@@ -1,0 +1,11 @@
+fijacion_beyonce:
+  album_id: 1
+  player_id: 1
+
+fijacion_shakira:
+  album_id: 1
+  player_id: 2
+
+fixation_shakira:
+  album_id: 2
+  player_id: 2
