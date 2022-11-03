@@ -13,12 +13,6 @@ Nosso PO jamais iria esperar que um album pudesse ter mais de um artista. Transf
     - ruby '2.4.2'
     - rails '5.2.6'
 
-
-## Baixar o Projeto
-```bash
-git clone git@github.com:NathaliaC/ruby-dev-test-2.git
-```
-
 ## Para executar o projeto e criar os modelos
 
 Para instalar o ruby na sua máquina, você pode optar pela escolha de um gerenciador de versão da sua preferência, para esse teste foi utilizado o `asdf`.  
