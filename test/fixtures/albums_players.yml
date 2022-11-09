@@ -1,0 +1,15 @@
+shakira_fijacion:
+  album_id: 1
+  player_id: 1
+
+madonna_virgin:
+  album_id: 2
+  player_id: 2
+
+shakira_feat:
+  album_id: 3
+  player_id: 1
+
+madonna_feat:
+  album_id: 3
+  player_id: 2

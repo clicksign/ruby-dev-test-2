@@ -1,11 +1,11 @@
 fijacion:
+  id: 1
   name: Fijación Oral, Vol. 1
-  player: shakira
 
-fixation:
-  name: Oral Fixation, Vol. 2
-  player: shakira
+virgin:
+  id: 2
+  name: Like a Virgin
 
-fixation:
-  name: She Wolf
-  player: shakira
+feat:
+  id: 3
+  name: Fake Album

@@ -10,14 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_09_002543) do
+ActiveRecord::Schema.define(version: 2022_11_09_011159) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
-    t.integer "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["player_id"], name: "index_albums_on_player_id"
   end
 
   create_table "albums_players", id: false, force: :cascade do |t|
