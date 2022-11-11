@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AlbumPlayerTest < ActiveSupport::TestCase
+class AlbumsPlayerTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

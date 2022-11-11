@@ -1,2 +1,0 @@
-class AlbumPlayer < ApplicationRecord
-end
