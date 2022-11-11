@@ -1,11 +1,11 @@
 fijacion:
+  id: 1
   name: Fijación Oral, Vol. 1
-  player: shakira
 
 fixation:
+  id: 2
   name: Oral Fixation, Vol. 2
-  player: shakira
 
-fixation:
-  name: She Wolf
-  player: shakira
+some_girls:
+  id: 3
+  name: Some Girls To Me

@@ -1,5 +1,11 @@
 beyonce:
+  id: 1
   name: Beyonce
 
 shakira:
+  id: 2
   name: Shakira
+
+madonna:
+  id: 3
+  name: Madonna

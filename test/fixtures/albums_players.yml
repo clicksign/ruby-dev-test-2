@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  references: 
-  references: 
+fijacion_shakira:
+  album_id: 1
+  player_id: 2
 
-two:
-  references: 
-  references: 
+some_girls_shakira:
+  album_id: 3
+  player_id: 2
+
+some_girls_madonna:
+  album_id: 3
+  player_id: 3
