@@ -1,0 +1,2 @@
+class AlbumPlayer < ApplicationRecord
+end
