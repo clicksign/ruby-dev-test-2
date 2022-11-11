@@ -8,5 +8,5 @@ class Album < ApplicationRecord
   end
   # Remove after migrations
 
-  validates_presence_of :name, :players
+  validates_presence_of :name
 end

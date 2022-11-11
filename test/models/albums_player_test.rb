@@ -6,9 +6,11 @@ class AlbumsPlayerTest < ActiveSupport::TestCase
     assert albums_player.valid?
   end
 
-  test "multiple albums_player" do
-    albums_player = AlbumsPlayer.new(album: albums(:some_girls), players: [players(:shakira), players(:madonna)])
-    assert albums_player.valid?
+  test "multiple players for one album" do
+    album_shakira = AlbumsPlayer.new(album: albums(:some_girls), player: players(:shakira))
+    album_madonna = AlbumsPlayer.new(album: albums(:some_girls), player: players(:madonna))
+    assert album_shakira.valid?
+    assert album_madonna.valid?
   end
 
   test "presence of album" do

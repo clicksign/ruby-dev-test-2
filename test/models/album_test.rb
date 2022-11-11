@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AlbumTest < ActiveSupport::TestCase
   test "valid album" do
-    album = Album.new(name: 'Oral Fixation, Vol. 2', player: players(:shakira))
+    album = Album.new(name: albums(:some_girls))
     assert album.valid?
   end
 
