@@ -33,6 +33,8 @@ GEM
       activemodel (= 5.2.0)
       activesupport (= 5.2.0)
       arel (>= 9.0)
+    activerecord-import (1.4.1)
+      activerecord (>= 4.2)
     activestorage (5.2.0)
       actionpack (= 5.2.0)
       activerecord (= 5.2.0)
@@ -156,6 +158,8 @@ GEM
     selenium-webdriver (3.13.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    shoulda-matchers (4.5.1)
+      activesupport (>= 4.2.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -194,6 +198,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-import (~> 1.4)
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15, < 4.0)
@@ -205,6 +210,7 @@ DEPENDENCIES
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
   selenium-webdriver
+  shoulda-matchers (~> 4.5)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
