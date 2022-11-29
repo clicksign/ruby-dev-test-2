@@ -35,10 +35,17 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+# Fast mime detection by extension or content (Uses freedesktop.org.xml shared-mime-info database)
+gem 'mimemagic', '0.3.10'
+# RuboCop is a Ruby code style checking and code formatting tool. It aims to enforce the community-driven Ruby Style Guide.
+gem 'rubocop', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do
