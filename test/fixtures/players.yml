@@ -1,5 +1,7 @@
 beyonce:
   name: Beyonce
+  albums: [dangerously_in_love, bday, i_am_sasha_fierce]
 
 shakira:
   name: Shakira
+  albums: [fijacion, fixation, she_wolf]
