@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  album: one
+  player: one
+
+two:
+  album: two
+  player: two
+
+three:
+  album: three
+  player: three

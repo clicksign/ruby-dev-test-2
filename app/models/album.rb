@@ -1,5 +1,6 @@
 class Album < ApplicationRecord
-  belongs_to :player
+  has_many :partner_artists, class_name: 'AlbumPlayer', dependent: :destroy
+  has_many :players, through: :partner_artists
 
-  validates_presence_of :name
+  validates :name, :players, presence: true
 end
