@@ -34,10 +34,6 @@ Como é apenas um desafio, irei apenas mapear a ação que seria necessária em 
     ```
 
 ### Comandos principais
-* Executar server:
-    ```
-    docker compose up
-    ```
 * Executar console:
     ```
     docker compose run --rm web bin/rails console
@@ -56,6 +52,10 @@ Como é apenas um desafio, irei apenas mapear a ação que seria necessária em 
     ```
     docker compose run --rm web bundle update
     docker compose up --build
+    ```
+* Executar server:
+    ```
+    docker compose up
     ```
 * Limpar server, inclusive o banco de dados (depois volte ao comando `Executar server`):
     ```
