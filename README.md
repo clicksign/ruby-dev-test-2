@@ -41,6 +41,6 @@ William Lopes -> Entrega:
     ```
 ### Ação em produção mapeada
 Como é apenas um desafio, irei apenas mapear a ação que seria necessária em produção com dados reais:
-1. Faça a migração até a parte de criar a nova tabela de relacionamento N->N entre as tabelas players e albums.
+1. Faça a migração até a parte de criar a nova tabela de relacionamento N->N entre as entidades players e albums.
 1. Migre os dados referentes aos albums que cada player possui para a nova tabela de relacionamento.
 1. Só execute a migração que remove a chave de referência do player presente em albums depois de migrar os dados.
