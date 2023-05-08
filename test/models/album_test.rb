@@ -17,4 +17,18 @@ class AlbumTest < ActiveSupport::TestCase
     assert_not album.valid?
     assert_not_empty album.errors[:players]
   end
+
+  test "can have one album" do
+    album = Album.new(name: 'Peligro', players: [players(:shakira)])
+    assert album.valid?
+    assert album.save
+    assert_equal 1, album.players.count
+  end
+
+  test "can have many albums" do
+    album = Album.new(name: 'Peligro', players: [players(:shakira), players(:madonna)])
+    assert album.valid?
+    assert album.save
+    assert_equal 2, album.players.count
+  end
 end
