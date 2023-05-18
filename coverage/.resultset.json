@@ -1,29 +1,15 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/renan/projetos/ruby-dev-test-2/spec/models/player_album_spec.rb": {
+      "/home/renan/projetos/ruby-dev-test-2/spec/models/album_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          5,
-          5,
-          5,
+          2,
           null,
           1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
           1,
           1,
           1,
@@ -339,13 +325,10 @@
           null
         ]
       },
-      "/home/renan/projetos/ruby-dev-test-2/app/models/player_album.rb": {
+      "/home/renan/projetos/ruby-dev-test-2/app/models/album.rb": {
         "lines": [
           1,
-          1,
-          1,
           null,
-          1,
           1,
           null
         ]
@@ -356,25 +339,8 @@
           1,
           null
         ]
-      },
-      "/home/renan/projetos/ruby-dev-test-2/app/models/player.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null
-        ]
-      },
-      "/home/renan/projetos/ruby-dev-test-2/app/models/album.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1684370293
+    "timestamp": 1684417926
   }
 }

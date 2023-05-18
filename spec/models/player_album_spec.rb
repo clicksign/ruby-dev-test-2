@@ -24,7 +24,7 @@ RSpec.describe PlayerAlbum, type: :model do
       expect(@player_album).to_not be_valid
     end
   end
-  context 'valid stockitem' do
+  context 'valid PlayerAlbum' do
     it { expect(@player_album).to be_valid }
   end
 end
