@@ -11,4 +11,9 @@ class PlayerTest < ActiveSupport::TestCase
     assert_not player.valid?
     assert_not_empty player.errors[:name]
   end
+
+  test "can have many albums" do
+    player = Player.new(name: 'Shakira & Madonna', albums: [albums(:she_wolf), albums(:madonna)])
+    assert player.valid?
+  end
 end

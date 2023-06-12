@@ -3,3 +3,8 @@ beyonce:
 
 shakira:
   name: Shakira
+  albums: [fijacion, fixation, she_wolf]
+
+madonna:
+  name: Maddona
+  albums: [Maddona]
