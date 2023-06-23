@@ -1,11 +1,14 @@
 fijacion:
   name: Fijación Oral, Vol. 1
-  player: shakira
 
 fixation:
   name: Oral Fixation, Vol. 2
-  player: shakira
 
-fixation:
+she_wolf:
   name: She Wolf
-  player: shakira
+
+ray_of_light:
+  name: Ray of Light
+
+like_a_prayer:
+  name: Like a Prayer

@@ -1,5 +1,11 @@
 beyonce:
   name: Beyonce
+  albums: she_wolf, like_a_prayer
 
 shakira:
   name: Shakira
+  albums: fijacion, fixation, ray_of_light
+
+madonna:
+  name: Madonna
+  albums: ray_of_light, like_a_prayer
