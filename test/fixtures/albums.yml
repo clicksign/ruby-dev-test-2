@@ -1,11 +1,20 @@
 fijacion:
   name: Fijación Oral, Vol. 1
-  player: shakira
 
 fixation:
   name: Oral Fixation, Vol. 2
-  player: shakira
 
 fixation:
   name: She Wolf
-  player: shakira
+
+one:
+  id: 1
+  name: Toxicity
+
+two:
+  id: 2
+  name: The Next Logical Progression
+
+three:
+  id: 3
+  name: Let Them Talk

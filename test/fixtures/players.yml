@@ -3,3 +3,15 @@ beyonce:
 
 shakira:
   name: Shakira
+
+one:
+  id: 1
+  name: System Of A Down
+
+two:
+  id: 2
+  name: Gift of Gab
+
+three:
+  id: 3
+  name: Hugh Laurie
