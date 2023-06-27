@@ -25,4 +25,17 @@ class PlayerAlbumTest < ActiveSupport::TestCase
     assert_not player_album.valid?
     assert_not_empty player_album.errors[:album]
   end
+
+  test "uniqueness scoped by album" do
+    player = Player.new(name: "Roberto Carlos")
+    album  = Album.new(name: "Em Rítimo de Aventura")
+    PlayerAlbum.create(player: player, album: album)
+
+    player_album_dup = PlayerAlbum.new(player: player, album: album)
+
+    assert_not player_album_dup.valid?
+
+    assert_not_empty player_album_dup.errors[:album_id]
+    assert_not_empty player_album_dup.errors[:player_id]
+  end
 end
