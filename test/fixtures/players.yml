@@ -1,5 +1,11 @@
 beyonce:
   name: Beyonce
+  albums: [lemonade]
 
 shakira:
   name: Shakira
+  albums: [fijacion fixation she_wolf]
+
+madonna:
+  name: Madonna
+  albums: [madonna hard_candy music]

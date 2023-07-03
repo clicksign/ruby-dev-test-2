@@ -1,11 +1,26 @@
 fijacion:
   name: Fijación Oral, Vol. 1
-  player: shakira
 
 fixation:
   name: Oral Fixation, Vol. 2
-  player: shakira
 
-fixation:
+she_wolf:
   name: She Wolf
-  player: shakira
+
+madonna:
+  name: Madonna
+
+hard_candy:
+  name: Hard Candy
+
+music:
+  name: Music
+
+lemonade:
+  name: Lemonade
+
+ctrl:
+  name: CTRL
+
+sos: 
+  name: SOS
