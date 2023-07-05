@@ -28,3 +28,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore env file.
+.env
+
+# Ignore tool version file for ASDF
+.tool-versions
+
