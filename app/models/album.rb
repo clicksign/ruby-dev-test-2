@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
 class Album < ApplicationRecord
-  belongs_to :player
+  has_many :album_players, dependent: :destroy
+  has_many :players, through: :album_players
 
   validates_presence_of :name
+  validates_presence_of :players
 end
