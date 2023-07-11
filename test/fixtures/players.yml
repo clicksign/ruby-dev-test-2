@@ -1,5 +1,7 @@
 beyonce:
   name: Beyonce
+  albums: [fijacion]
 
 shakira:
   name: Shakira
+  albums: [fixation]
