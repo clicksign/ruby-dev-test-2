@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -7,6 +9,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module RubyDevTest2
+  # rubocop:disable Style/Documentation
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
@@ -16,4 +19,5 @@ module RubyDevTest2
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+  # rubocop:enable Style/Documentation
 end
