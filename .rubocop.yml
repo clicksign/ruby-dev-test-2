@@ -9,4 +9,6 @@ AllCops:
     - db/migrate/**
     - spec/**/*.rb
     - bin/**
+Documentation:
+  Enabled: false
 
